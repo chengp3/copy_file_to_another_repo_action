@@ -1,6 +1,9 @@
 #!/bin/sh
 
-sh main.sh
+for entry in /*
+do
+  echo "$entry"
+done
 
 set -e
 set -x
