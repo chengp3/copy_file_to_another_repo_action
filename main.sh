@@ -26,16 +26,10 @@ git config --global user.email "$INPUT_USER_EMAIL"
 git config --global user.name "$INPUT_USER_NAME"
 git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-token:$API_TOKEN_GITHUB@$INPUT_GIT_SERVER/$INPUT_DESTINATION_REPO.git" "$CLONE_DIR"
 
-if [ ! -z "$INPUT_RENAME" ]
-then
-  echo "Setting new filename: ${INPUT_RENAME}"
-  DEST_COPY="$CLONE_DIR/$INPUT_DESTINATION_FOLDER/$INPUT_RENAME"
-else
-  DEST_COPY="$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
-fi
+DEST_COPY="$CLONE_DIR/$1"
 
 echo "Copying contents to git repo"
-mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
+mkdir -p $CLONE_DIR/$1
 if [ -z "$INPUT_USE_RSYNC" ]
 then
   cp -R "$INPUT_SOURCE_FILE" "$DEST_COPY"
