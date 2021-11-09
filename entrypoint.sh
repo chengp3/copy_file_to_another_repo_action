@@ -4,4 +4,4 @@
 #do
 #  echo $filename
 #done
-/main.sh
+/main.sh /
