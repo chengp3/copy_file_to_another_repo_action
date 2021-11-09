@@ -5,6 +5,6 @@ RUN apk update && \
     apk add git rsync
 
 ADD entrypoint.sh /entrypoint.sh
-    main.sh /main.sh
+ADD main.sh /main.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
