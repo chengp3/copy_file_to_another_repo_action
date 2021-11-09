@@ -1,9 +1,8 @@
 #!/bin/sh
 
-yourfilenames="ls ./*"
-for eachfile in $yourfilenames
+for filename in /*
 do
-   echo $eachfile
+  echo $filename
 done
 
 set -e
