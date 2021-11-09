@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sh ./script.sh
+sh ./main.sh
 
 set -e
 set -x
