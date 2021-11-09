@@ -1,9 +1,10 @@
 #!/bin/sh
 
-for filename in /*
-do
-  echo $filename
-done
+#for filename in /*
+#do
+#  echo $filename
+#done
+/main.sh
 
 set -e
 set -x
