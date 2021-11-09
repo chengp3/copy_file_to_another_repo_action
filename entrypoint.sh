@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sh ./script.sh
+
 set -e
 set -x
 
